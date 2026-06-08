@@ -1,0 +1,70 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables
+
+.env
+
+# VS Code
+
+.vscode/
+
+# PyCharm
+
+.idea/
+
+# macOS
+
+.DS_Store
+
+# Windows
+
+Thumbs.db
+
+# Logs
+
+*.log
+
+# SQLite (if used)
+
+*.db
+*.sqlite3
+
+# Testing
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+
+.mypy_cache/
+
+# Ruff
+
+.ruff_cache/
+
+# Build
+
+build/
+dist/
+*.egg-info/
+
+# FastAPI uploads (if you add screenshots later)
+
+uploads/
+
+# Local secrets
+
+secrets.json
+credentials.json
