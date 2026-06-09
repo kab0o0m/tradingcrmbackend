@@ -119,6 +119,7 @@ def get_trade(
     return {
         "id": trade.id,
         "pair": trade.pair,
+        "entry_date": trade.entry_date,
         "direction": trade.direction,
         "strategy": trade.strategy,
         "session": trade.session,
