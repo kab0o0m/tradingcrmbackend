@@ -40,7 +40,7 @@ def dashboard(
             "Current Balance:",
             account.current_balance
         )
-
+        starting_balance = account.starting_balance
         balance = (
             account.current_balance
         )
@@ -91,6 +91,7 @@ def dashboard(
 
     return {
         "balance": balance,
+        "starting_balance": starting_balance,
         "total_trades": total_trades,
         "wins": wins,
         "losses": losses,
