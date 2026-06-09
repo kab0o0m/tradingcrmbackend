@@ -45,6 +45,8 @@ def create_trade(
         pnl=trade.pnl,
 
         status=trade.status,
+        entry_date=trade.entry_date,
+
         comments=trade.comments
     )
 
@@ -83,7 +85,10 @@ def get_trades(
         .filter(
             Trade.user_id ==
             current_user.id
-        )
+        ).order_by(
+        Trade.entry_date.desc(),
+        Trade.id.desc()
+    )
         .all()
     )
 
@@ -162,8 +167,10 @@ def update_trade(
     trade.risk_amount = trade_data.risk_amount
     trade.pnl = trade_data.pnl
 
+    trade.entry_date = trade_data.entry_date
     trade.status = trade_data.status
     trade.comments = trade_data.comments
+
 
     pnl_difference = (
         new_pnl -

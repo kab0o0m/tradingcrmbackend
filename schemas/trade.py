@@ -1,5 +1,7 @@
 from pydantic import BaseModel
 
+from datetime import date
+
 class TradeCreate(BaseModel):
     pair: str
     direction: str
@@ -8,6 +10,7 @@ class TradeCreate(BaseModel):
     risk_amount: float
     pnl: float
     status: str
+    entry_date: date
     comments: str
 
 class TradeUpdate(BaseModel):
@@ -18,4 +21,5 @@ class TradeUpdate(BaseModel):
     risk_amount: float
     pnl: float
     status: str
+    entry_date: date
     comments: str

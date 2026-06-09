@@ -19,7 +19,7 @@ class Trade(Base):
     risk_amount = Column(DECIMAL(10,2))
     pnl = Column(DECIMAL(10,2))
 
-    entry_date = Column(DateTime)
+    entry_date = Column(Date)
     close_date = Column(DateTime)
 
     status = Column(String(50))
