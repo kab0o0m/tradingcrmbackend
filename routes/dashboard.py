@@ -41,9 +41,7 @@ def dashboard(
             account.current_balance
         )
         starting_balance = account.starting_balance
-        balance = (
-            account.current_balance
-        )
+        balance = round(float(account.current_balance), 2)
     else:
         balance = 0
 
@@ -75,11 +73,11 @@ def dashboard(
         for trade in trades
     )
 
-    win_rate = (
+    win_rate = round(float(
         wins /
         (wins + losses)
         * 100
-    )
+    ), 2)
         
 
     print(
