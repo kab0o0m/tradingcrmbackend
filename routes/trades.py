@@ -94,6 +94,26 @@ def get_trades(
 
     return trades
 
+@router.get("/recent")
+def get_recent_trades(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    trades = (
+        db.query(Trade)
+        .filter(
+            Trade.user_id == current_user.id
+        )
+        .order_by(
+            Trade.entry_date.desc(),
+            Trade.id.desc()
+        )
+        .limit(3)
+        .all()
+    )
+
+    return trades
+
 
 @router.get("/{trade_id}")
 def get_trade(
