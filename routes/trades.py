@@ -108,7 +108,7 @@ def get_recent_trades(
             Trade.entry_date.desc(),
             Trade.id.desc()
         )
-        .limit(3)
+        .limit(5)
         .all()
     )
 
