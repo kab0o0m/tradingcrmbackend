@@ -10,6 +10,7 @@ from models.trade import Trade
 from routes.auth import router as auth_router
 from routes.trades import router as trade_router
 from routes.dashboard import router as dashboard_router
+from routes.news import router as news_router
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -20,6 +21,7 @@ app = FastAPI()
 app.include_router(auth_router)
 app.include_router(trade_router)
 app.include_router(dashboard_router)
+app.include_router(news_router)
 
 app.add_middleware(
     CORSMiddleware,
