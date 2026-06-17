@@ -47,7 +47,7 @@ def create_trade(
         status=trade.status,
         entry_date=trade.entry_date,
 
-        comments=trade.comments
+        comments=trade.comments,
         setup_grade=trade.setup_grade
     )
 
