@@ -147,7 +147,8 @@ def get_trade(
         "risk_amount": float(trade.risk_amount),
         "pnl": float(trade.pnl),
         "status": trade.status,
-        "comments": trade.comments
+        "comments": trade.comments,
+        "setup_grade": trade.setup_grade
     }
 
 
