@@ -12,6 +12,7 @@ class TradeCreate(BaseModel):
     status: str
     entry_date: date
     comments: str
+    setup_grade: str | None = None
 
 class TradeUpdate(BaseModel):
     pair: str
@@ -23,3 +24,4 @@ class TradeUpdate(BaseModel):
     status: str
     entry_date: date
     comments: str
+    setup_grade: str | None = None

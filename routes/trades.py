@@ -48,6 +48,7 @@ def create_trade(
         entry_date=trade.entry_date,
 
         comments=trade.comments
+        setup_grade=trade.setup_grade
     )
 
     db.add(new_trade)
@@ -191,6 +192,7 @@ def update_trade(
     trade.entry_date = trade_data.entry_date
     trade.status = trade_data.status
     trade.comments = trade_data.comments
+    trade.setup_grade = trade_data.setup_grade
 
 
     pnl_difference = (

@@ -25,3 +25,8 @@ class Trade(Base):
     status = Column(String(50))
 
     comments = Column(Text)
+
+    setup_grade = Column(
+    String(10),
+    nullable=True
+)
